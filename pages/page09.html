@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+    <script>
+        var msg;
+        
+        //1. декларация на функция
+        function showMessage(n,txt)
+        {
+            if( n < 1 || n > 6)
+            {
+                //window.alert('Недопустима стойност за n ('+n+')');
+                console.log('Недопустима стойност за n ('+n+')');
+                n = 4;
+            }
+            
+            if( txt === null || txt === undefined || txt === '')
+            {
+                console.log('Няма текст за съобщението');
+                txt = 'Hello World!';
+            }
+            document.write('<h'+n+'>'+txt+'</h'+n+'>');
+        }
+        
+        //2. извикване на функцията 
+        showMessage(8 , 'Добавихте продукт в количката за ...');
+        showMessage(4, 'Успешен вход в сайта');
+        showMessage(2, msg );
+    </script>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt a velit distinctio aliquid reiciendis, necessitatibus aut natus odio, nisi expedita, accusamus repellat cupiditate vitae quaerat amet alias neque laboriosam? Debitis?</p>
+    <noscript>
+        Моля разрешете използването на JS ....
+    </noscript>
+</body>
+</html>
