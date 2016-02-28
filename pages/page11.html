@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+
+</head>
+<body>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt a velit distinctio aliquid reiciendis, necessitatibus aut natus odio, nisi expedita, accusamus repellat cupiditate vitae quaerat amet alias neque laboriosam? Debitis?</p>
+    
+    <noscript>
+        Моля разрешете използването на JS ....
+    </noscript>
+    <!-- Неблокиращо включване -->
+    <!-- Ако е зададено св. src, НЕ трябва да пишем код м/у етикетите!!-->
+    <script src="../js/jquery-2.2.1.min.js"></script>
+    <!-- Локален JS -->
+    <script>
+       $(document).ready( function(){
+           $('body').prepend('<h1>Hello jQuery!</h1>');
+       }); // on document ready
+    </script>
+</body>
+</html>
