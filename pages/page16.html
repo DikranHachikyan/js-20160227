@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+    <script>
+       
+    </script>
+</head>
+<body>
+    <h3>Millennium Monument</h3>
+    <img src="../pics-large/pic2.jpg" alt="Millenium Monument">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ex, tenetur iste modi repudiandae veniam quam a consequatur minus at amet delectus quas autem, suscipit praesentium nesciunt est odit repellat?</p>
+    <noscript>
+        Моля разрешете използването на JS ....
+    </noscript>
+     <script src="../js/jquery-2.2.1.min.js"></script>
+    <!-- Локален JS -->
+    <script>
+       $(document).ready( function(){
+            $('img').attr('src','../pics-large/pic3.jpg')
+                    .attr('alt', 'City Attractions');
+            $('h3').html('City Attraction');
+            $('p').html('Christchurch <em>city</em> attractions');
+       }); // on document ready
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+    <p class="txt">Lorem ipsum <a href="./page02.html" title="Page 02">dolor sit amet</a>, consectetur adipisicing elit. Vel consequuntur temporibus animi repudiandae architecto natus perspiciatis debitis, quidem amet ipsam nobis harum adipisci neque consequatur, pariatur dolore a? Sint, corrupti.
+    </p>
+    <p>Dicta voluptate, mollitia <a href="http://dir.bg">exercitationem</a> sequi illum ad itaque repellendus molestiae hic minima. Hic maxime deleniti dicta dignissimos mollitia, dolorem, in molestiae, eaque et minima consequuntur ipsum magni, impedit sapiente sed!
+    </p>
+    <div class="txt">Reprehenderit <a href="./page04.html" title="Page 04">sed officiis</a> explicabo dolorem eligendi voluptate officia, dicta! Nesciunt quidem optio atque corporis nam. Consequatur voluptatibus facilis, aliquam quia pariatur, explicabo quod ut doloribus repudiandae. Fugiat atque neque excepturi?
+    </div>
+    <div>Sequi cum quo vitae omnis <a href="http://btv.bg" title="BTV">dolores delectus</a> alias recusandae. Explicabo quis sit corporis itaque fugit provident facilis non ratione animi nulla officiis voluptates, ipsam architecto necessitatibus porro. Iusto, deleniti, quos.
+    </div>
+    <p>Voluptatibus laboriosam dignissimos iste fugiat obcaecati cumque, autem corrupti aliquid nisi, vel provident voluptates temporibus odit cum expedita nemo, fuga ab aspernatur voluptatem. Aperiam, doloremque, temporibus quaerat quod illum perferendis.
+    </p>
+    
+    <noscript>
+        Моля разрешете използването на JS ....
+    </noscript>
+    <!-- Неблокиращо включване -->
+    <!-- Ако е зададено св. src, НЕ трябва да пишем код м/у етикетите!!-->
+    <script src="../js/jquery-2.2.1.min.js"></script>
+    <!-- Локален JS -->
+    <script>
+       $(document).ready( function(){
+           
+           $('p').css('border', '1px solid red');
+           $('div.txt').css('background-color','#ccc');
+           
+           $('a[title^="Page"]').css('background-color','navy');
+           $('a[title]').css('color','#fc0');
+       }); // on document ready
+    </script>
+</body>
+</html>

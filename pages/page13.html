@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        ul li a{
+            text-decoration: none;
+        }
+        a img{
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <ul>
+        <li><a href="audio.mp3">Audio Book</a></li>
+        <li><a href="video.mp4">jQuery Selectors</a></li>
+        <li><a href="book.pdf">Mastering jQuery</a></li>
+        <li><a href="cv.doc">CV</a></li>
+    </ul>
+    <noscript>
+        Моля разрешете използването на JS ....
+    </noscript>
+    <!-- Неблокиращо включване -->
+    <!-- Ако е зададено св. src, НЕ трябва да пишем код м/у етикетите!!-->
+    <script src="../js/jquery-2.2.1.min.js"></script>
+    <!-- Локален JS -->
+    <script>
+       $(document).ready( function(){
+           
+            $('li a[href$=".mp3"]').prepend('<img src="../images/audio-x-generic.png">');    
+            $('li a[href$=".mp4"]').prepend('<img src="../images/video-x-generic.png">');
+            $('li a[href$=".pdf"]').prepend('<img src="../images/package-x-generic.png">');
+            $('li a[href$=".doc"]').prepend('<img src="../images/x-office-document.png">');
+           
+       }); // on document ready
+    </script>
+</body>
+</html>

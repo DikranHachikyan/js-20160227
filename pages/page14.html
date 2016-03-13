@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        ul li a{
+            text-decoration: none;
+        }
+        a img{
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <p class="abstract">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas quis ullam accusamus quod accusantium. Deserunt accusantium, quos itaque quasi velit cum! Perspiciatis repellat eum saepe, porro deleniti laboriosam reprehenderit molestias!</p>
+    <p>Libero iste animi nihil doloribus tempore esse molestias quod vero facilis accusantium quam sint architecto dignissimos enim quibusdam, reiciendis rerum, ex tenetur natus a deleniti explicabo officiis quo maxime. Quibusdam.</p>
+    <p>Cum officia laborum veritatis, nihil iure temporibus, sint soluta ab fugit, odit quo est quaerat cumque error deleniti ipsam excepturi nisi! Et culpa veniam fugiat, sunt magnam distinctio sequi voluptatum!</p>
+    <noscript>
+        Моля разрешете използването на JS ....
+    </noscript>
+    <!-- Неблокиращо включване -->
+    <!-- Ако е зададено св. src, НЕ трябва да пишем код м/у етикетите!!-->
+    <script src="../js/jquery-2.2.1.min.js"></script>
+    <!-- Локален JS -->
+    <script>
+       $(document).ready( function(){
+           //$('p').prepend('<img src="../images/video-x-generic.png">');
+           //$('p').append('<a href="#">Read More</a>');
+           $('p').prepend('<img src="../images/video-x-generic.png">')
+                 .append('<a href="#">Read More</a>')
+                 .css('background-color','#ccc')
+                 .css('border','1px solid red');
+           
+           $('.abstract').before('<h1>Lorem ipsum dolor sit amet, consectetur</h1>');
+           $('.abstract').after('<hr>');
+           
+           $('p a').html('<strong>More...</strong>');
+           //$('p a').text('<strong>More...</strong>');
+       }); // on document ready
+    </script>
+</body>
+</html>
