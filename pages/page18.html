@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+    <script>
+       
+    </script>
+    <style>
+        ul {
+          list-style: none;
+        }
+        ul li+li{
+          display: none
+        }
+        ul li img{
+          max-width: 190px;
+        }
+    </style>
+</head>
+<body>
+   <h2>City Center</h2>
+    <ul>
+        <li data-info="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">
+            <img src="../pics-large/pic1.jpg" alt="City Center">
+        </li>
+        <li data-info="Delectus, eaque nihil provident voluptates officia eos">
+            <img src="../pics-large/pic2.jpg" alt="Millenium Monument">
+        </li>
+        <li data-info="Dolorem soluta voluptate voluptatum corporis quas velit">
+            <img src="../pics-large/pic3.jpg" alt="City Attractions">
+        </li>
+        <li data-info="Quas velit itaque quia, ea qui asperiores inventore">
+            <img src="../pics-large/pic4.jpg" alt="Avon River">
+        </li>
+        <li data-info="Assumenda atque velit ullam maiores sunt est labore id hic inventore autem aperiam incidunt, soluta">
+            <img src="../pics-large/pic5.jpg" alt="Viktoria University">
+        </li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    
+    <input type="button" value="Previous" id="prv">
+    <input type="button" value="Next" id="nxt">
+    <noscript>
+        Моля разрешете използването на JS ....
+    </noscript>
+     <script src="../js/jquery-2.2.1.min.js"></script>
+    <!-- Локален JS -->
+    <script>
+       $(document).ready( function(){
+           $('#nxt').click(function(){
+              
+               $('ul li:first-child').appendTo('ul');
+               setInfo();
+               setTitle();
+           });//on click button next
+           $('#prv').click(function(){
+               $('ul li:last-child').prependTo('ul');
+               setInfo();
+               setTitle();
+           });//on click button previous
+       }); // on document ready
+       function setInfo()
+        {
+            var info='';
+            info = $('ul li:first-child').data('info');
+            $('p').html(info);
+        }
+       function setTitle()
+        {
+           var title = '';
+            
+           title = $('ul li:first-child img').attr('alt');
+           $('h2').html(title);  
+        }
+    </script>
+</body>
+</html>

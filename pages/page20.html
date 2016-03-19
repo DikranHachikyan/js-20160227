@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+    <script>
+       
+    </script>
+    <style>
+ 
+    </style>
+</head>
+<body>
+    <a href="#">
+        <img src="../pics-small/pic1.jpg" alt="City Center">
+    </a> 
+    <noscript>
+        Моля разрешете използването на JS ....
+    </noscript>
+     <script src="../js/jquery-2.2.1.min.js"></script>
+    <!-- Локален JS -->
+    <script>
+       $(document).ready( function(){
+           $('a')
+               .mouseover(function(){
+                    $(this).find('img').attr('src','../pics-small/pic2.jpg');
+               }) //on mouse over
+               .mouseout(function(){
+                    $(this).find('img').attr('src','../pics-small/pic1.jpg');
+               });
+       }); // on document ready
+       
+    </script>
+</body>
+</html>

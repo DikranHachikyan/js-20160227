@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+    <script>
+       
+    </script>
+    <style>
+        ul {
+          list-style: none;
+        }
+        ul li+li{
+          display: none
+        }
+        ul li img{
+          max-width: 190px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><img src="../pics-large/pic1.jpg" alt="City Center"></li>
+        <li><img src="../pics-large/pic2.jpg" alt="Millenium Monument"></li>
+        <li><img src="../pics-large/pic3.jpg" alt="City Attractions"></li>
+        <li><img src="../pics-large/pic4.jpg" alt="Avon River"></li>
+        <li><img src="../pics-large/pic5.jpg" alt="Viktoria University"></li>
+    </ul>
+    <input type="button" value="Previous" id="prv">
+    <input type="button" value="Next" id="nxt">
+    <noscript>
+        Моля разрешете използването на JS ....
+    </noscript>
+     <script src="../js/jquery-2.2.1.min.js"></script>
+    <!-- Локален JS -->
+    <script>
+       $(document).ready( function(){
+           $('#nxt').click(function(){
+               $('ul li:first-child').appendTo('ul');
+           });//on click button next
+           $('#prv').click(function(){
+               $('ul li:last-child').prependTo('ul');
+           });//on click button previous
+       }); // on document ready
+    </script>
+</body>
+</html>

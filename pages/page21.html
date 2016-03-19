@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+    <script>
+       
+    </script>
+    <style>
+        dt{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Често задавани въпроси</h1>
+    <dl>
+        <dt><a href="#">Lorem ipsum dolor sit amet?</a></dt>
+        <dd>
+        Consectetur adipisicing elit. Impedit autem vel nemo, eligendi ex sint atque, aperiam fuga ut recusandae quos rerum reiciendis aliquid! Quam nobis unde, dolor quaerat voluptas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, vitae, commodi. Culpa saepe illum, distinctio obcaecati, mollitia praesentium doloribus maiores veniam expedita ut, magni rem numquam sit pariatur iste, optio. </dd>
+        <dt><a href="#">Unde eligendi ea quaerat numquam?</a></dt>
+        <dd>Ab nobis magni praesentium delectus odit pariatur asperiores rerum voluptas expedita quam vel. Sequi magni veritatis mollitia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, rerum, quisquam ea officia fugit quia. Consectetur laudantium illo iusto quidem veniam, nihil quos rem, voluptas voluptate aliquam, minus. Voluptates, aliquid!</dd>
+        <dt><a href="#">Nisi quis illo natus commodi iure?</a></dt>
+        <dd>Error necessitatibus aspernatur cupiditate saepe mollitia eos, omnis architecto aut modi voluptatum accusamus quidem, minima optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci quas exercitationem ab perspiciatis aliquid, maxime quae, est aperiam ipsa, magni repudiandae blanditiis atque suscipit nemo totam? Magnam libero, ullam aliquam.</dd>
+    </dl>
+    <noscript>
+        Моля разрешете използването на JS ....
+    </noscript>
+     <script src="../js/jquery-2.2.1.min.js"></script>
+    <!-- Локален JS -->
+    <script>
+       $(document).ready( function(){
+           $('dd').hide();
+           $('dt').click(function(){
+               $(this).next().slideToggle();
+           });//on click dt
+       }); // on document ready
+       
+    </script>
+</body>
+</html>
