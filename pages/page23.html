@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+    <script>
+       
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <article>
+        <heading>
+            <h1>Gallery: Christchurch NZ</h1>
+        </heading>
+        <section>
+            <h2>City Center</h2>
+            <img src="../pics-large/pic1.jpg" alt="City Center">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam tempore molestias eum dolor, nulla, ex, voluptatum quae dolore consequuntur error cum libero accusantium laboriosam corporis et in. Porro, repellendus, optio.</p>    
+        </section>
+        <footer>
+            <input type="button" value="Previous" id="prv">
+            <input type="button" value="Next" id="nxt">
+        </footer>
+    </article>
+        
+    
+    <noscript>
+        Моля разрешете използването на JS ....
+    </noscript>
+     <script src="../js/jquery-2.2.1.min.js"></script>
+    <!-- Локален JS -->
+    <script>
+       $(document).ready( function(){
+           var image = {
+                  "url": "http://abv.bg",
+                  "src": "../pics-large/pic3.jpg",
+                  "thumbnail": "./pics-small/pic3.jpg",
+                  "title": "City Attractions",
+                  "alt": "City Attractions",
+                  "info": "Ea numquam <strong>aliquam quasi</strong> maiores soluta quidem debitis est repudiandae, architecto neque dignissimos. Repellat numquam nulla atque enim, necessitatibus maiores quibusdam culpa sit est consequatur laboriosam error, molestiae harum facere."
+                };
+           $('#nxt').click( function(){
+              $('h2').html( image.title);
+              $('img').attr('src', image.src)
+                   .attr('alt',image.alt);
+              $('p').html(image.info); 
+           });
+       }); // on document ready
+       
+    </script>
+</body>
+</html>

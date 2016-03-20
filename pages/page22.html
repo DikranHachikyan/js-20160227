@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+    <script>
+       
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <a href="#">
+        <img src="../pics-large/pic1.jpg" alt="">
+    </a>
+    <noscript>
+        Моля разрешете използването на JS ....
+    </noscript>
+     <script src="../js/jquery-2.2.1.min.js"></script>
+    <!-- Локален JS -->
+    <script>
+       $(document).ready( function(){
+            var images = ['pic1.jpg','pic2.jpg','pic4.jpg','pic5.jpg','pic3.jpg'];
+                         //  0           1          2         3
+            var path = '../pics-large/';
+            var currentImage = 0;
+           
+            setInterval( function(){
+                    //1. увеличаваме currentImage с 1
+                    currentImage++;
+                    //1.а проверяваме дали не сме достигнали края на масива
+                    if( currentImage >= images.length)
+                    {
+                        currentImage = 0; //започваме от началото на масива
+                    }
+                    //2. сменяме картинката
+                    $('img').attr('src', path + images[currentImage]);
+                }, 2000);
+       }); // on document ready
+       
+    </script>
+</body>
+</html>

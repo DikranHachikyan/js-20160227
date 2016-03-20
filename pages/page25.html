@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+    <script>
+       
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <article>
+        <heading>
+            <h1>Gallery: Christchurch NZ</h1>
+        </heading>
+        <section>
+            <h2>Millennium Monument</h2>
+            <img src="../pics-large/pic2.jpg" alt="Millennium Monument">
+            <p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Iste veniam quis quam <em>numquam</em> ex, ipsam recusandae placeat officiis odio magnam provident tempora nemo sit nostrum voluptates libero, animi. Aliquid, ex?</p>    
+        </section>
+        <footer>
+            <input type="button" value="Previous" id="prv">
+            <input type="button" value="Next" id="nxt">
+        </footer>
+    </article>
+        
+    <img src="../pics-small/pic1.jpg" onmouseover="this.src='../pics-small/pic2.jpg'"
+                                      onmouseout="this.src='../pics-small/pic1.jpg'"   >
+    <br>
+    <select onchange="window.location = this.value">
+        <option value="">--Site--</option>        
+        <option value="http://dir.bg">Dir</option>        
+        <option value="http://btv.bg">Btv</option>        
+        <option value="http://linux-bg.org">Linux Bg</option>        
+    </select>                                  
+    <noscript>
+        Моля разрешете използването на JS ....
+    </noscript>
+     <script src="../js/jquery-2.2.1.min.js"></script>
+    <!-- Локален JS -->
+     <script src="../js/pictures.js"></script>
+    <script>
+       $(document).ready( function(){
+            var currentImage = 0;
+            $('#prv').hide();
+            //console.log('title',$(this).title); 
+            $(this).attr('title','Gallery');
+            $('#nxt').click(function(){
+                currentImage++;
+                $('#prv').show();
+                if( currentImage >= images.length - 1)
+                {
+                    $(this).hide();
+                }
+                
+                //за удобство !!!
+                setItemContent(images[currentImage]);
+            });//show next image
+           
+            $('#prv').click(function(){
+                currentImage--;
+                $('#nxt').show();
+                if( currentImage <= 0 )
+                {
+                   $(this).hide();
+                }
+                
+                setItemContent(images[currentImage]);
+            });//show previous image
+           
+            //$('[type="button"]').click(function(){
+            //  $(this).val('Clicked:' + $(this).attr('id') );
+            //});
+       }); // on document ready
+       
+        function setItemContent(pic)
+        {
+            $('h2').html(pic.title);
+            $('img').attr({'src':'.'+ pic.src , 'alt': pic.alt});
+            $('p').html(pic.info); 
+        }
+    </script>
+</body>
+</html>

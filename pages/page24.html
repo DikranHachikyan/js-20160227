@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+    <script>
+       
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <article>
+        <heading>
+            <h1>Gallery: Christchurch NZ</h1>
+        </heading>
+        <section>
+            <h2>Millennium Monument</h2>
+            <img src="../pics-large/pic2.jpg" alt="Millennium Monument">
+            <p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Iste veniam quis quam <em>numquam</em> ex, ipsam recusandae placeat officiis odio magnam provident tempora nemo sit nostrum voluptates libero, animi. Aliquid, ex?</p>    
+        </section>
+        <footer>
+            <input type="button" value="Previous" id="prv">
+            <input type="button" value="Next" id="nxt">
+        </footer>
+    </article>
+        
+    
+    <noscript>
+        Моля разрешете използването на JS ....
+    </noscript>
+     <script src="../js/jquery-2.2.1.min.js"></script>
+    <!-- Локален JS -->
+     <script src="../js/pictures.js"></script>
+    <script>
+       $(document).ready( function(){
+            var currentImage = 0;
+            
+            $('#nxt').click(function(){
+                currentImage++;
+                
+                if( currentImage >= images.length )
+                {
+                    currentImage = 0;
+                }
+                
+                //за удобство !!!
+                setItemContent(images[currentImage]);
+            });//show next image
+           
+            $('#prv').click(function(){
+                currentImage--;
+                
+                if( currentImage < 0 )
+                {
+                    currentImage = images.length -1;
+                }
+                
+                setItemContent(images[currentImage]);
+            });//show previous image
+       }); // on document ready
+       
+        function setItemContent(pic)
+        {
+            $('h2').html(pic.title);
+            $('img').attr({'src':'.'+ pic.src , 'alt': pic.alt});
+            $('p').html(pic.info); 
+        }
+    </script>
+</body>
+</html>
